@@ -100,8 +100,8 @@ public class SensingService extends IntentService implements GoogleApiClient.Con
         initGoogleApiClient();
 
         // Register sensor listeners
-        mSensorManager.registerListener(mHeartRateListener, mHeartRateSensor, SensorManager.SENSOR_DELAY_NORMAL);
-        mSensorManager.registerListener(mAccelerometerListener, mAccelerometer, SensorManager.SENSOR_DELAY_NORMAL);
+        mSensorManager.registerListener(mHeartRateListener, mHeartRateSensor, SensorManager.SENSOR_DELAY_FASTEST);
+        mSensorManager.registerListener(mAccelerometerListener, mAccelerometer, SensorManager.SENSOR_DELAY_FASTEST);
     }
 
     @Override

@@ -23,6 +23,22 @@ public class SensorReceiverService extends WearableListenerService {
     public class Event {
         private EventType type;
         private String message;
+
+        public EventType getType() {
+            return type;
+        }
+
+        public void setType(EventType type) {
+            this.type = type;
+        }
+
+        public String getMessage() {
+            return message;
+        }
+
+        public void setMessage(String message) {
+            this.message = message;
+        }
     }
 
     /**
@@ -36,13 +52,6 @@ public class SensorReceiverService extends WearableListenerService {
 
     public SensorReceiverService() {
         listeners = new HashMap<>();
-
-        // Start listening for sensor data
-        startListening();
-    }
-
-    private void startListening() {
-
     }
 
     public void setListener(EventType type, SensedEventListener listener) {
@@ -64,15 +73,20 @@ public class SensorReceiverService extends WearableListenerService {
 
             // Handle accelerometers related events
             if(listeners.get(EventType.FALL) != null) {
-
-            }
+                Event e = new Event();
+                e.setType(EventType.FALL);
+                e.setMessage(getBaseContext().getString(R.string.user_fallen));
+                listeners.get(EventType.FALL).onEventSensed(e);
         }
         else if (messageEvent.getPath().equals(HEART_RATE_SENSING_CAPABILITY)) {
             float heartRate = ByteBuffer.wrap(data).order(ByteOrder.LITTLE_ENDIAN).getFloat();
 
             // Handle heart rate sensor related events
             if(listeners.get(EventType.HEART_ATTACK) != null) {
-
+                Event e = new Event();
+                e.setType(EventType.HEART_ATTACK);
+                e.setMessage(getBaseContext().getString(R.string.heart_attack));
+                listeners.get(EventType.HEART_ATTACK).onEventSensed(e);
             }
         }
     }
