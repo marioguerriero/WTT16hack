@@ -84,6 +84,8 @@ public class SensingService extends IntentService implements GoogleApiClient.Con
     private GoogleApiClient mGoogleApiClient;
 
     private SensorManager mSensorManager;
+    private Sensor mHeartRateSensor;
+    private Sensor mAccelerometer;
 
     public SensingService() {
         super("SensingService");
@@ -93,23 +95,27 @@ public class SensingService extends IntentService implements GoogleApiClient.Con
     @Override
     protected void onHandleIntent(Intent intent) {
         mSensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
-        Sensor mHeartRateSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_HEART_RATE);
-        Sensor mAccelerometer = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+        mHeartRateSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_HEART_RATE);
+        mAccelerometer = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
 
         // Initialize connection with smartphone
         initGoogleApiClient();
 
         // Register sensor listeners
-        mSensorManager.registerListener(mHeartRateListener, mHeartRateSensor, SensorManager.SENSOR_DELAY_FASTEST);
-        mSensorManager.registerListener(mAccelerometerListener, mAccelerometer, SensorManager.SENSOR_DELAY_FASTEST);
+        if(mHeartRateSensor != null)
+            mSensorManager.registerListener(mHeartRateListener, mHeartRateSensor, SensorManager.SENSOR_DELAY_FASTEST);
+        if(mAccelerometer != null)
+            mSensorManager.registerListener(mAccelerometerListener, mAccelerometer, SensorManager.SENSOR_DELAY_FASTEST);
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
 
-        mSensorManager.unregisterListener(mHeartRateListener);
-        mSensorManager.unregisterListener(mAccelerometerListener);
+        if(mHeartRateSensor != null)
+            mSensorManager.unregisterListener(mHeartRateListener);
+        if(mAccelerometer != null)
+            mSensorManager.unregisterListener(mAccelerometerListener);
     }
 
     /**
