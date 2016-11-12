@@ -24,4 +24,23 @@ public class SensedEventsUtils {
         return realAccelData.getState() == RealAccelData.State.FALLEN;
     }
 
+    /**
+     * Detect whether or not the user has an heart attack
+     * @param heartRate
+     * @return
+     */
+    public static boolean hasHeartAttack(float heartRate) {
+        if(heartRate == 0) // measurement is invalid
+            return false;
+
+        boolean walking = RealAccelData.getInstance().getState() == RealAccelData.State.WALKING;
+
+        return (walking && heartRate >= 220) || (!walking && heartRate >= 120);
+    }
+
+    public static boolean hasFaint(float heartRate) {
+        boolean walking = RealAccelData.getInstance().getState() == RealAccelData.State.WALKING;
+
+        return (walking && heartRate < 60) || (!walking && heartRate < 30);
+    }
 }

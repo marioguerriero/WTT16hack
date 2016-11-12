@@ -11,9 +11,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1a381852-078d-43ce-8f3c-a158a416f148" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mobile/src/main/java/wtt/wtt16hack/sensor/SensedEventsUtils.java" afterPath="$PROJECT_DIR$/mobile/src/main/java/wtt/wtt16hack/sensor/SensedEventsUtils.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mobile/src/main/java/wtt/wtt16hack/sensor/SensorReceiverService.java" afterPath="$PROJECT_DIR$/mobile/src/main/java/wtt/wtt16hack/sensor/SensorReceiverService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mobile/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/mobile/src/main/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wear/src/main/java/wtt/wtt16hack/sensor/SensingService.java" afterPath="$PROJECT_DIR$/wear/src/main/java/wtt/wtt16hack/sensor/SensingService.java" />
     </list>
     <ignored path="WTT16hack.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -48,56 +47,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="SensedEventsUtils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mobile/src/main/java/wtt/wtt16hack/sensor/SensedEventsUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="475">
+              <caret line="43" column="75" selection-start-line="43" selection-start-column="75" selection-end-line="43" selection-end-column="75" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="SensorReceiverService.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mobile/src/main/java/wtt/wtt16hack/sensor/SensorReceiverService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#765#766#0" expanded="true" />
-                <element signature="e#800#801#0" expanded="true" />
-                <element signature="e#847#848#0" expanded="true" />
-                <element signature="e#887#888#0" expanded="true" />
-                <element signature="e#925#926#0" expanded="true" />
-                <element signature="e#963#964#0" expanded="true" />
-                <element signature="e#1013#1014#0" expanded="true" />
-                <element signature="e#1059#1060#0" expanded="true" />
-                <element signature="e#1345#1346#0" expanded="true" />
-                <element signature="e#1388#1389#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mobile/src/main/java/wtt/wtt16hack/MainActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state relative-caret-position="403">
+              <caret line="92" column="44" selection-start-line="92" selection-start-column="44" selection-end-line="92" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GestureReceiverService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mobile/src/main/java/wtt/wtt16hack/GestureReceiverService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mobile/src/main/res/values/strings.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="53" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="53" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -2883,10 +2850,10 @@
         <option value="$PROJECT_DIR$/mobile/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/wear/src/main/java/wtt/wtt16hack/sensor/WearableMessageListener.java" />
         <option value="$PROJECT_DIR$/wear/src/main/java/wtt/wtt16hack/sensor/SensedEventsUtils.java" />
-        <option value="$PROJECT_DIR$/mobile/src/main/java/wtt/wtt16hack/sensor/SensedEventsUtils.java" />
         <option value="$PROJECT_DIR$/mobile/src/main/java/wtt/wtt16hack/sensor/RealAccelData.java" />
         <option value="$PROJECT_DIR$/wear/src/main/java/wtt/wtt16hack/sensor/SensingService.java" />
         <option value="$PROJECT_DIR$/mobile/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/mobile/src/main/java/wtt/wtt16hack/sensor/SensedEventsUtils.java" />
         <option value="$PROJECT_DIR$/mobile/src/main/java/wtt/wtt16hack/sensor/SensorReceiverService.java" />
       </list>
     </option>
@@ -2992,6 +2959,28 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="wtt16hack" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WTT16hack" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mobile" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wtt16hack" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sensor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -3384,7 +3373,14 @@
       <option name="project" value="LOCAL" />
       <updated>1478973643255</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="call listeners when an event is sensed">
+      <created>1478974863927</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1478974863927</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -3464,7 +3460,8 @@
     <MESSAGE value="add SensingService" />
     <MESSAGE value="start SensingIntent from wear's MainActivity" />
     <MESSAGE value="smartphone side code for sensed events. Implement fall detection" />
-    <option name="LAST_COMMIT_MESSAGE" value="smartphone side code for sensed events. Implement fall detection" />
+    <MESSAGE value="call listeners when an event is sensed" />
+    <option name="LAST_COMMIT_MESSAGE" value="call listeners when an event is sensed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -3573,26 +3570,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mobile/src/main/java/wtt/wtt16hack/sensor/SensedEventsUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="69" selection-start-line="23" selection-start-column="69" selection-end-line="23" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mobile/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="53" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mobile/src/main/java/wtt/wtt16hack/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state relative-caret-position="198">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -3607,22 +3588,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mobile/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="53" selection-start-line="4" selection-start-column="53" selection-end-line="4" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobile/src/main/java/wtt/wtt16hack/sensor/SensedEventsUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="43" column="75" selection-start-line="43" selection-start-column="75" selection-end-line="43" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mobile/src/main/java/wtt/wtt16hack/sensor/SensorReceiverService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+        <state relative-caret-position="403">
+          <caret line="92" column="44" selection-start-line="92" selection-start-column="44" selection-end-line="92" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#765#766#0" expanded="true" />
-            <element signature="e#800#801#0" expanded="true" />
-            <element signature="e#847#848#0" expanded="true" />
-            <element signature="e#887#888#0" expanded="true" />
-            <element signature="e#925#926#0" expanded="true" />
-            <element signature="e#963#964#0" expanded="true" />
-            <element signature="e#1013#1014#0" expanded="true" />
-            <element signature="e#1059#1060#0" expanded="true" />
-            <element signature="e#1345#1346#0" expanded="true" />
-            <element signature="e#1388#1389#0" expanded="true" />
           </folding>
         </state>
       </provider>

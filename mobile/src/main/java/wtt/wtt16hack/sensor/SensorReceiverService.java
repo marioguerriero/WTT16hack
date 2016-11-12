@@ -14,7 +14,7 @@ public class SensorReceiverService extends WearableListenerService {
     private static final String HEART_RATE_SENSING_CAPABILITY = "heart_rate_sensing";
 
     public enum EventType {
-        FALL, HEART_ATTACK
+        FALL, HEART_ATTACK, FAINT
     }
 
     /**
@@ -72,22 +72,26 @@ public class SensorReceiverService extends WearableListenerService {
             float z = ByteBuffer.wrap(dataZ).order(ByteOrder.LITTLE_ENDIAN).getFloat();
 
             // Handle accelerometers related events
-            if(listeners.get(EventType.FALL) != null) {
+            if(listeners.get(EventType.FALL) != null && SensedEventsUtils.hasFallen(x, y, z)) {
                 Event e = new Event();
                 e.setType(EventType.FALL);
                 e.setMessage(getBaseContext().getString(R.string.user_fallen));
                 listeners.get(EventType.FALL).onEventSensed(e);
-        }
-        else if (messageEvent.getPath().equals(HEART_RATE_SENSING_CAPABILITY)) {
-            float heartRate = ByteBuffer.wrap(data).order(ByteOrder.LITTLE_ENDIAN).getFloat();
+            }
+            else if (messageEvent.getPath().equals(HEART_RATE_SENSING_CAPABILITY)) {
+                float heartRate = ByteBuffer.wrap(data).order(ByteOrder.LITTLE_ENDIAN).getFloat();
 
-            // Handle heart rate sensor related events
-            if(listeners.get(EventType.HEART_ATTACK) != null) {
-                Event e = new Event();
-                e.setType(EventType.HEART_ATTACK);
-                e.setMessage(getBaseContext().getString(R.string.heart_attack));
-                listeners.get(EventType.HEART_ATTACK).onEventSensed(e);
+                boolean heartAttack = SensedEventsUtils.hasHeartAttack(heartRate);
+                boolean faint = SensedEventsUtils.hasFaint(heartRate);
+
+                // Handle heart rate sensor related events
+                if(listeners.get(EventType.HEART_ATTACK) != null && (heartAttack || faint)) {
+                    Event e = new Event();
+                    if(heartAttack) e.setType(EventType.HEART_ATTACK);
+                    if(faint) e.setType(EventType.FAINT);
+                    e.setMessage(getBaseContext().getString(R.string.heart_attack));
+                    listeners.get(EventType.HEART_ATTACK).onEventSensed(e);
+                }
             }
         }
     }
-}
