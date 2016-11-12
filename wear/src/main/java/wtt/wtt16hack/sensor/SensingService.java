@@ -162,10 +162,10 @@ public class SensingService extends IntentService implements GoogleApiClient.Con
         return bestNodeId;
     }
 
-    private void requestSensing(byte[] voiceData, String transcriptionNodeId, String capability) {
+    private void requestSensing(byte[] data, String transcriptionNodeId, String capability) {
         if (transcriptionNodeId != null) {
             Wearable.MessageApi.sendMessage(mGoogleApiClient, transcriptionNodeId,
-                    capability, voiceData).setResultCallback(
+                    capability, data).setResultCallback(
                     new ResultCallback<MessageApi.SendMessageResult>() {
                         @Override
                         public void onResult(MessageApi.SendMessageResult sendMessageResult) {
