@@ -1,5 +1,6 @@
 package wtt.wtt16hack;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.wearable.view.BoxInsetLayout;
 import android.view.View;
@@ -13,6 +14,7 @@ import java.util.Locale;
 
 import watch.nudge.gesturelibrary.AbstractGestureClientActivity;
 import watch.nudge.gesturelibrary.GestureConstants;
+import wtt.wtt16hack.sensor.SensingService;
 
 public class MainWatchActivity extends AbstractGestureClientActivity  {
 
@@ -22,6 +24,8 @@ public class MainWatchActivity extends AbstractGestureClientActivity  {
     private BoxInsetLayout mContainerView;
     private TextView mTextView;
     private TextView mClockView;
+
+    private Intent serviceIntent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +37,22 @@ public class MainWatchActivity extends AbstractGestureClientActivity  {
         mTextView = (TextView) findViewById(R.id.text);
         mClockView = (TextView) findViewById(R.id.clock);
         //setSubscribeWindowEvents(true);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        if(serviceIntent != null) {
+            serviceIntent = new Intent(this, SensingService.class);
+            startService(serviceIntent);
+        }
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+
     }
 
     @Override
